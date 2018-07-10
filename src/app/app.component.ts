@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-const Swal = require('sweetalert2')
+// const Swal = require('sweetalert2')
 
 
 @Component({
@@ -11,13 +11,29 @@ const Swal = require('sweetalert2')
 export class AppComponent {
   todoInput: string = "";
 
-  todos = [];
+  todos = [{
+    isChecked: false,
+    name: 'Run in circles'
+  }
+  {
+    isChecked: true,
+    name: 'Laugh out loud'
+  }
+  ];
+
+// If using the font awesome checkbox
+  // checkOffTodo(todo) {
+  //   todo.isChecked = !todo.isChecked;
+  // }
 
   createTodo() {
     let trimmedInput = this.todoInput.trim();
     console.log(this.todoInput);
     if(trimmedInput !="") {
-      this.todos.push(this.todoInput);
+      this.todos.push({
+        isChecked: false,
+        name: this.todoInput
+      });
     }
     // code that will create a todo
     this.todoInput = "";
@@ -28,9 +44,15 @@ export class AppComponent {
     // edits the todo
     // rename that input to whatever I write
     let index = this.todos.indexOf(todo);
-    console.log(index);
 
-    this.todos[index] = prompt("Edit Now",this.todos[index]);
+    // to keep comment if hit cancel. before returned null
+    let oldTodo = this.todos[index].name
+    this.todos[index].name = prompt("Edit Now",this.todos[index].name);
+
+    if (this.todos[index].name == null) {
+      // when cancel, put old chore back
+      this.todos[index].name = oldTodo;
+    }
   }
 
   deleteTodo(todo) {

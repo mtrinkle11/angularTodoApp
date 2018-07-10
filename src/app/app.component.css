@@ -2,3 +2,6 @@
     background: rgb(216, 206, 185);
 }
 
+.strike {
+    text-decoration: line-through;
+}
