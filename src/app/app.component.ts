@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+const Swal = require('sweetalert2')
+
 
 @Component({
   selector: 'app-root',
@@ -41,5 +43,16 @@ export class AppComponent {
 
   deleteAll(todo) {
     this.todos = [];
+    // Need to find how to connect sweetalert2
+    
+    // swal({
+    //   title: 'Sweet!',
+    //   text: 'Modal with a custom image.',
+    //   imageUrl: 'https://unsplash.it/400/200',
+    //   imageWidth: 400,
+    //   imageHeight: 200,
+    //   imageAlt: 'Custom image',
+    //   animation: false
+    // })
   }
 }
