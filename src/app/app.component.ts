@@ -14,7 +14,11 @@ export class AppComponent {
   todos = [{
     isChecked: false,
     name: 'Run in circles'
-  }
+  },
+  {
+    isChecked: true,
+    name: 'Kick yourself'
+  },
   {
     isChecked: true,
     name: 'Laugh out loud'
