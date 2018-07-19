@@ -67,7 +67,7 @@ export class AppComponent {
 
   }
 
-  deleteAll(todo) {
+  deleteAll() {
     this.todos = [];
     // Need to find how to connect sweetalert2
     
