@@ -5,3 +5,7 @@
 .strike {
     text-decoration: line-through;
 }
+
+h3 {
+    color: black;
+    text-shadow: 0 0 3px rgb(0, 119, 255)}

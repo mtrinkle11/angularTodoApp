@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-image: url("/assets/relax.jpg");
-    background-color: #cccccc;
-    width: auto;
-    height: 100%;
+    /* background-image: url("/assets/relax.jpg"); */
+    background: url(/assets/relax.jpg) no-repeat bottom center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
  }

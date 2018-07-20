@@ -1,12 +1,16 @@
 <router-outlet></router-outlet>
-<div class=" container mt-5 border border-info rounded">
+
+<!-- div of the container for the todo app -->
+<div class=" container mt-5 border border-info rounded col-md-6 col-11">
   <!-- title -->
   <h3 class="text-center p-3 m-5">
     Before Relax Time
   </h3>
+
   <!-- input chores -->
   <div class="input-group mb-3">
       <input [(ngModel)]="todoInput" type="text" class="form-control" (keyup.enter)="createTodo()" placeholder="New Chore" aria-label="New Chore" aria-describedby="basic-addon2">
+
       <!-- input chore button -->
       <div class="input-group-append">
         <button class="btn btn-success" type="button" (click)="createTodo()"><i class="fas fa-plus-square"></i></button>
@@ -14,6 +18,7 @@
     </div>
   <div class="row mt-5">
     <div class="col">
+
       <!-- todo table list -->
       <table class="table">
         <thead class="thead-light">
@@ -21,9 +26,7 @@
         <tbody>
           <tr *ngFor="let todo of todos">
             <td>
-              <!-- <i *ngIf="todo.isChecked === false" class="far fa-square"></i>
-              <i *ngIf="todo.isChecked === true" class="far fa-check-square"></i> -->
-
+              
               <input type="checkbox" [(ngModel)]="todo.isChecked">
               <span [ngClass]="{'strike': todo.isChecked}"> {{ todo.name }}</span>
             </td>
@@ -32,6 +35,7 @@
               <button class="btn btn-danger" (click)="deleteTodo(todo)">Delete</button>
             </td>
           </tr>
+
           <!-- delete all button -->
           <tr>
             <td>
