@@ -63,22 +63,31 @@ export class AppComponent {
     // deletes todo
     let index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
-    // console.log(this.deleteTodo(todo));
 
   }
 
+  
   deleteAll() {
-    this.todos = [];
-    // Need to find how to connect sweetalert2
-    
-    // swal({
-    //   title: 'Sweet!',
-    //   text: 'Modal with a custom image.',
-    //   imageUrl: 'https://unsplash.it/400/200',
-    //   imageWidth: 400,
-    //   imageHeight: 200,
-    //   imageAlt: 'Custom image',
-    //   animation: false
-    // })
+    this.todos = []
   }
+    // Need to find how to connect sweetalert2
+    // swal({
+    //   title: 'Are you sure?',
+    //   text: "You won't be able to revert this!",
+    //   type: 'warning',
+    //   showCancelButton: true,
+    //   confirmButtonColor: '#3085d6',
+    //   cancelButtonColor: '#d33',
+    //   confirmButtonText: 'Yes, delete it!'
+    // }).then((result) => {
+    //   if (result.value) {
+    //     swal(
+    //       'Deleted!',
+    //       'Your file has been deleted.',
+    //       'success'
+    //     )
+    //   }
+    // })
+  
+  
 }
